@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 *{
+    /* border: 1px solid; */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     -webkit-text-stroke-color: #0DB760;
+}
+html{
+    width: 100vw;
+}
+body{
+    width:100%;
+    overflow-x: hidden;
 }
 .absolute{
     position: absolute;
@@ -20,6 +28,7 @@
 }
 .container{
     width: 100vw;
+    overflow-x: hidden;
     
 }
 .block{
@@ -33,6 +42,8 @@
     width: 100%;
 }
 .first .img-container{
+    background-image: url(/img/bg_dark.svg);
+    background-size: cover;
     z-index: 0;
     height: 100%;
     width: 100%;
@@ -53,8 +64,10 @@
     z-index: 10;
 }
 .first .name{
+    text-align: center;
+    width: 90%;
     color: white;
-    font-size: 5em;
+    font-size: 2rem;
 }
 .first .fade-gradinet{
     width: 100%;
@@ -84,7 +97,7 @@
 .heading{
     width: 100%;
     text-align: center;
-    font-size: 3.3em;
+    font-size: 270%;
     margin: 1em;
     text-align: center;
     -webkit-text-stroke-width: 0.01em;
@@ -92,7 +105,7 @@
     letter-spacing: 0.01em;
 }
 .heading:nth-child(2){
-    font-size: 3em;
+    font-size: 250%;
     letter-spacing: 0em;
     color: inherit;
 }
@@ -105,8 +118,8 @@
 }
 .second .profile-pic-container div{
     background: rgb(194, 194, 194);
-    height: 20em;
-    width: 20em;
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
 }
 
@@ -212,3 +225,20 @@ form > *{
     transform: scale(1.1);
 }
 
+@media (max-width: 1024px) {
+    .second .bio-container{
+        margin: 3em 5em;
+    }
+    .skill-container{
+        width: 70%;
+    }
+}
+@media (max-width:720px) {
+    
+    .block{
+        height: fit-content;
+    }
+    .first{
+        height: 100vh;
+    }
+}
